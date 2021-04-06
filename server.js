@@ -57,7 +57,7 @@ userInput.question("How Many people are on your team? ", function (teamNumber) {
 
             userInput.question("What is your email ? ", function (email) {
 
-                fs.appendFile(fileName, '<h6 class="card-subtitle mb-2 text-muted">' + email + "</h4>", function () { });
+                fs.appendFile(fileName, '<h6 class="card-subtitle mb-2 text-muted">' + email + "</h6>", function () { });
 
                 userInput.question("What is your Office Number? ", function (officeNum) {
 
