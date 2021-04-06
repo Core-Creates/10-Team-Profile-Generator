@@ -48,15 +48,16 @@ userInput.question("How Many people are on your team? ", function (teamNumber) {
 
     // userInput.next(teamNumber);
     for (let i = 0; i < teamNumber; i++) {
-        fs.appendFile(fileName, "<div>", function () { });
+        fs.appendFile(fileName, "<div class='card' style='width: 18rem;'>", function () { });
+        fs.appendFile(fileName, '<div class="card-body">', function () { });
 
         userInput.question("What is your name ? ", function (name) {
             // userInput.next(name);
-            fs.appendFile(fileName, "<h4>" + name + "</h4>", function () { });
+            fs.appendFile(fileName, "<h2>" + name + "</h2>", function () { });
 
             userInput.question("What is your email ? ", function (email) {
 
-
+                fs.appendFile(fileName, "<h4>" + email + "</h4>", function () { });
 
                 userInput.question("What is your Office Number? ", function (officeNum) {
 
@@ -79,6 +80,7 @@ userInput.question("How Many people are on your team? ", function (teamNumber) {
                 });
             });
         });
+        fs.appendFile(fileName, "</div>", function () { });
         fs.appendFile(fileName, "</div>", function () { });
     }
 
