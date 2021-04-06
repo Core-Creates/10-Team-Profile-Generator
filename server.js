@@ -53,18 +53,19 @@ userInput.question("How Many people are on your team? ", function (teamNumber) {
 
         userInput.question("What is your name ? ", function (name) {
             // userInput.next(name);
-            fs.appendFile(fileName, '<h5 class="card-title">' + name + "</h5>", function () { });
+            fs.appendFile(fileName, '<h5 class="card-title">' + name + "</h5>\n", function () { });
 
             userInput.question("What is your email ? ", function (email) {
 
-                fs.appendFile(fileName, '<h6 class="card-subtitle mb-2 text-muted">' + email + "</h6>", function () { });
+                fs.appendFile(fileName, '<h6 class="card-subtitle mb-2 text-muted">' + email + "</h6>\n", function () { });
 
                 userInput.question("What is your Office Number? ", function (officeNum) {
 
-                    fs.appendFile(fileName, '<p class="card-text">' + officeNum + "</p>" function () { });
+                    fs.appendFile(fileName, '<p class="card-text">' + officeNum + "\n", function () { });
 
 
                     userInput.question("What is your github?", function (github) {
+                        fs.appendFile(fileName, github + "</p>\n", function () { });
 
 
                         userInput.question("What school do you attend? ", function (school) {
