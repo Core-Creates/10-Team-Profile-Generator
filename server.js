@@ -79,10 +79,8 @@ userInput.question("How Many people are on your team? ", function (teamNumber) {
                 });
             });
         });
+        fs.appendFile(fileName, "</div>", function () { });
     }
-    // process.exit(0);
-
-
 
 });
 
