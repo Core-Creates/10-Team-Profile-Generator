@@ -20,7 +20,9 @@ http.createServer(function (req, res) {
     });
 }).listen(8080);
 
-fs.writeFile('teamMates.html', '', function (err) {
+var fileName = 'teamMates.html';
+
+fs.writeFile( fileName, '', function (err) {
     if (err) throw err;
     console.log('Created!');
 });
@@ -34,10 +36,11 @@ const userInput = readline.createInterface({
 userInput.question("How Many people are on your team? ", function (teamNumber) {
 
     // userInput.next(teamNumber);
-    for (var i = 0; i < teamNumber; i++) {
+    for (let i = 0; i < teamNumber; i++) {
 
         userInput.question("What is your name ? ", function (name) {
             // userInput.next(name);
+            fs.appendFile(fileName,"<h4>" + name + "</h4>", function(){});
 
             userInput.question("What is your email ? ", function (email) {
                 
