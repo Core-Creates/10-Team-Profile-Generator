@@ -61,6 +61,8 @@ userInput.question("How Many people are on your team? ", function (teamNumber) {
 
                 userInput.question("What is your Office Number? ", function (officeNum) {
 
+                    fs.appendFile(fileName, '<p class="card-text">' + officeNum + "</p>" function () { });
+
 
                     userInput.question("What is your github?", function (github) {
 
