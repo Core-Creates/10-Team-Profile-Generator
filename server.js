@@ -53,11 +53,11 @@ userInput.question("How Many people are on your team? ", function (teamNumber) {
 
         userInput.question("What is your name ? ", function (name) {
             // userInput.next(name);
-            fs.appendFile(fileName, "<h2>" + name + "</h2>", function () { });
+            fs.appendFile(fileName, '<h5 class="card-title">' + name + "</h5>", function () { });
 
             userInput.question("What is your email ? ", function (email) {
 
-                fs.appendFile(fileName, "<h4>" + email + "</h4>", function () { });
+                fs.appendFile(fileName, '<h6 class="card-subtitle mb-2 text-muted">' + email + "</h4>", function () { });
 
                 userInput.question("What is your Office Number? ", function (officeNum) {
 
