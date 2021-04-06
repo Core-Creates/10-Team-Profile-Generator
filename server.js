@@ -37,10 +37,11 @@ fs.writeFile(fileName,
 </head>
 
 <body>
-<nav className="navbar navbar-light bg-light"> <div class="container-fluid">
-<a class="navbar-brand" href="#">Teammate website</a>
-</div>
-<Nav> \n`,
+<nav className="navbar navbar-light bg-light"> 
+<div class="container-fluid">
+<a class="navbar-brand" href="#">Teammate website</a>\n
+</div>\n
+<nav> \n`,
     function (err) {
         if (err) throw err;
         console.log('Created!');
@@ -56,8 +57,8 @@ userInput.question("How Many people are on your team? ", function (teamNumber) {
 
     // userInput.next(teamNumber);
     for (let i = 0; i < teamNumber; i++) {
-        fs.appendFile(fileName, "<div class='card' style='width: 18rem;'>\n", function () { });
-        fs.appendFile(fileName, '<div class="card-body">\n', function () { });
+        fs.appendFile(fileName, "\n<div class='card' style='width: 18rem;'> \n", function () { });
+        fs.appendFile(fileName, '<div class="card-body"> \n', function () { });
 
         userInput.question("What is your name ? ", function (name) {
             // userInput.next(name);
@@ -65,7 +66,7 @@ userInput.question("How Many people are on your team? ", function (teamNumber) {
 
             userInput.question("What is your email ? ", function (email) {
 
-                fs.appendFile(fileName, '<h6 class="card-subtitle mb-2 text-muted">' + email + "</h6>\n", function () { });
+                fs.appendFile(fileName, '<h6 class="card-subtitle mb-2 text-muted">\n' + email + "</h6>\n", function () { });
 
                 userInput.question("What is your Office Number? ", function (officeNum) {
 
@@ -73,7 +74,7 @@ userInput.question("How Many people are on your team? ", function (teamNumber) {
 
 
                     userInput.question("What is your github?", function (github) {
-                        fs.appendFile(fileName, github + "</p>\n", function () { });
+                        fs.appendFile(fileName, "" + github + "</p>\n", function () { });
 
 
                         userInput.question("What school do you attend? ", function (school) {
@@ -84,7 +85,7 @@ userInput.question("How Many people are on your team? ", function (teamNumber) {
                             your github is ${github},
                             your school is ${school}`)
 
-                            fs.appendFile(fileName, "</div>\n </div>\n </body>\n </html>\n", function () { });
+                            fs.appendFile(fileName, "    </div>\n" + "  </div>\n" + " </body>\n" + "</html>\n", function () { });
 
                             userInput.close();
                         });
@@ -93,8 +94,8 @@ userInput.question("How Many people are on your team? ", function (teamNumber) {
                 });
             });
         });
-        fs.appendFile(fileName, "</div>", function () { });
-        fs.appendFile(fileName, "</div>", function () { });
+        // fs.appendFile(fileName, "</div>", function () { });
+        // fs.appendFile(fileName, "</div>", function () { });
     }
 
 });
