@@ -48,3 +48,6 @@ userInput.question("How Many people are on your team? ", function (teamNumber) {
     }
 });
 
+userInput.on("close", function() {
+    process.exit(0);
+});
