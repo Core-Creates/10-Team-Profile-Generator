@@ -20,10 +20,9 @@ http.createServer(function (req, res) {
     });
 }).listen(8080);
 
-fs.writeFile('teamMates.html', function (err) {
+fs.writeFile('teamMates.html', '', function (err) {
     if (err) throw err;
     console.log('Created!');
-    
 });
 
 
@@ -33,21 +32,46 @@ const userInput = readline.createInterface({
 });
 
 userInput.question("How Many people are on your team? ", function (teamNumber) {
-    for (let i = 1; i <= teamNumber; i++) {
+
+    // userInput.next(teamNumber);
+    for (var i = 0; i < teamNumber; i++) {
+
         userInput.question("What is your name ? ", function (name) {
+            // userInput.next(name);
+
             userInput.question("What is your email ? ", function (email) {
+                
+
+
                 userInput.question("What is your Office Number? ", function (officeNum) {
+                    
+
                     userInput.question("What is your github?", function (github) {
+                        
+
                         userInput.question("What school do you attend? ", function (school) {
+                            console.log(
+                                `your name is ${name}, 
+                            your email is ${email}, 
+                            your office number is ${officeNum},
+                            your github is ${github},
+                            your school is ${school}`)
+
                             userInput.close();
                         });
+                        
                     });
                 });
             });
         });
     }
+    // process.exit(0);
+
+
+
 });
 
-userInput.on("close", function() {
+userInput.on("close", function () {
+    // console.log("good bye");
     process.exit(0);
-});
+})
