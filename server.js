@@ -32,7 +32,7 @@ fs.writeFile(fileName,
     <title>Teammates</title>
 </head>
 
-<body>`,
+<body> \n`,
     function (err) {
         if (err) throw err;
         console.log('Created!');
