@@ -37,9 +37,9 @@ fs.writeFile(fileName,
 </head>
 
 <body>
-<nav className="navbar navbar-light bg-light"> 
-<div class="container-fluid">
-<a class="navbar-brand" href="#">Teammate website</a>\n
+<nav class="navbar navbar-dark bg-dark" style="height: 100px;"> 
+<div class="container-fluid" style="padding: 10px;">
+<a class="navbar-brand" href="#" style="font-size: 40px;">Teammate website</a>\n
 </div>\n
 <nav> \n`,
     function (err) {
@@ -56,7 +56,7 @@ const userInput = readline.createInterface({
 userInput.question("How Many people are on your team? ", function (teamNumber) {
 
     // userInput.next(teamNumber);
-    fs.appendFile(fileName, "\n<div class='card' style='width: 18rem;'> \n", function () { });
+    fs.appendFile(fileName, "\n<div class='card' style='width: 18rem; margin: 40px; padding: 10px;'> \n", function () { });
         fs.appendFile(fileName, '<div class="card-body"> \n', function () { });
     for (let i = 0; i < teamNumber; i++) {
 
@@ -70,11 +70,11 @@ userInput.question("How Many people are on your team? ", function (teamNumber) {
 
                 userInput.question("What is your Office Number? ", function (officeNum) {
 
-                    fs.appendFile(fileName, '<p class="card-text">' + officeNum + "\n", function () { });
+                    fs.appendFile(fileName, '<p class="card-text">' + officeNum + "</p>\n", function () { });
 
 
                     userInput.question("What is your github?", function (github) {
-                        fs.appendFile(fileName, "" + github + "</p>\n", function () { });
+                        fs.appendFile(fileName, '<p class="card-text">' + github + "</p>\n", function () { });
 
 
                         userInput.question("What school do you attend? ", function (school) {
