@@ -56,9 +56,9 @@ const userInput = readline.createInterface({
 userInput.question("How Many people are on your team? ", function (teamNumber) {
 
     // userInput.next(teamNumber);
-    for (let i = 0; i < teamNumber; i++) {
-        fs.appendFile(fileName, "\n<div class='card' style='width: 18rem;'> \n", function () { });
+    fs.appendFile(fileName, "\n<div class='card' style='width: 18rem;'> \n", function () { });
         fs.appendFile(fileName, '<div class="card-body"> \n', function () { });
+    for (let i = 0; i < teamNumber; i++) {
 
         userInput.question("What is your name ? ", function (name) {
             // userInput.next(name);
