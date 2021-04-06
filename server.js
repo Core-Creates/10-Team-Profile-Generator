@@ -78,12 +78,12 @@ userInput.question("How Many people are on your team? ", function (teamNumber) {
 
 
                         userInput.question("What school do you attend? ", function (school) {
-                            console.log(
-                                `your name is ${name}, 
-                            your email is ${email}, 
-                            your office number is ${officeNum},
-                            your github is ${github},
-                            your school is ${school}`)
+                            // console.log(
+                            //     `your name is ${name}, 
+                            // your email is ${email}, 
+                            // your office number is ${officeNum},
+                            // your github is ${github},
+                            // your school is ${school}`)
 
                             fs.appendFile(fileName, "    </div>\n" + "  </div>\n" + " </body>\n" + "</html>\n", function () { });
 
