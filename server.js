@@ -22,10 +22,21 @@ http.createServer(function (req, res) {
 
 var fileName = 'teamMates.html';
 
-fs.writeFile( fileName, '', function (err) {
-    if (err) throw err;
-    console.log('Created!');
-});
+fs.writeFile(fileName,
+    `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teammates</title>
+</head>
+
+<body>`,
+    function (err) {
+        if (err) throw err;
+        console.log('Created!');
+    });
 
 
 const userInput = readline.createInterface({
@@ -40,17 +51,17 @@ userInput.question("How Many people are on your team? ", function (teamNumber) {
 
         userInput.question("What is your name ? ", function (name) {
             // userInput.next(name);
-            fs.appendFile(fileName,"<h4>" + name + "</h4>", function(){});
+            fs.appendFile(fileName, "<h4>" + name + "</h4>", function () { });
 
             userInput.question("What is your email ? ", function (email) {
-                
+
 
 
                 userInput.question("What is your Office Number? ", function (officeNum) {
-                    
+
 
                     userInput.question("What is your github?", function (github) {
-                        
+
 
                         userInput.question("What school do you attend? ", function (school) {
                             console.log(
@@ -62,7 +73,7 @@ userInput.question("How Many people are on your team? ", function (teamNumber) {
 
                             userInput.close();
                         });
-                        
+
                     });
                 });
             });
