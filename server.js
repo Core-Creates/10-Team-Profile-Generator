@@ -48,6 +48,7 @@ userInput.question("How Many people are on your team? ", function (teamNumber) {
 
     // userInput.next(teamNumber);
     for (let i = 0; i < teamNumber; i++) {
+        fs.appendFile(fileName, "<div>", function () { });
 
         userInput.question("What is your name ? ", function (name) {
             // userInput.next(name);
